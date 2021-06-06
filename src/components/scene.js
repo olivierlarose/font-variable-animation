@@ -11,11 +11,9 @@ export default function Scene() {
         const windowHeight = window.innerHeight;
         const windowWidth = window.innerWidth;
 
-        const adjustY = (e.pageY / windowHeight - 1);
-        const adjustX = (e.pageX / windowWidth - 1);
         const mouse = {
-            x: (e.pageX / windowWidth) + adjustX,
-            y: (e.pageY / windowHeight) + adjustY
+            x: (e.pageX / windowWidth) * 2 - 1,
+            y: (e.pageY / windowHeight) * 2 -1
         }
         anim(mouse.x, mouse.y);
     }
